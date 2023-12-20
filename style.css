@@ -8,7 +8,6 @@ body {
   overflow-x: hidden;
   background-color: #efefef;
   margin-bottom: 60px;
-  width: 100%;
   height: 5000px;
 }
 
@@ -347,7 +346,7 @@ nav {
 @keyframes slideInLeft {
   from {
     opacity: 0;
-    transform: translateX(-40px);
+    transform: translateX(-10px);
     transition: opacity transform 0.3s;
     
   }
@@ -361,7 +360,7 @@ nav {
 @keyframes slideInRight {
   from {
     opacity: 0;
-    transform: translateX(40px);
+    transform: translateX(10px);
     transition: opacity transform 0.3s;
     
   }
