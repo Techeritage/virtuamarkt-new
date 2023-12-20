@@ -210,12 +210,14 @@ p, div {
   top: 10px;
   border: 1px solid rgba(0, 0, 0, 0.801);
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 }
 
 #show #outview span {
-  font-size: 40px;
+  padding: 0;
+  margin: 0;
+  font-size: 30px;
 }
 
 .show-cont {
