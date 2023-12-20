@@ -133,6 +133,7 @@ nav {
   width: 300px;
   margin-bottom: 15px;
   font-weight: 500;
+  font-size: 20px;
   }
 
 .hero p {
@@ -234,6 +235,7 @@ nav {
 
 .super-nav h3 {
   font-weight: 500;
+  font-size: 16px;
   }
 
 .super-nav a {
