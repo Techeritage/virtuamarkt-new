@@ -1,0 +1,543 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #efefef;
+  margin-bottom: 60px;
+  width: 100%;
+  height: 5000px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+}
+
+p, div {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+/**************** EXPERIMENT******************/
+nav {
+  padding: 5px 5%;
+  position: sticky;
+}
+
+.menu-nav {
+  width: 100%;
+  position: fixed;
+  right: -100%;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  transition: right 0.1s;
+}
+
+.menu-nav-cont {
+  background-color: rgba(0, 0, 0, 0.089);
+  flex-basis: 15%;
+}
+
+.menu-nav-cont2 {
+  background-color: rgb(240, 235, 235);
+  flex-basis: 85%;
+  padding: 45px 20px;
+  position: relative;
+}
+
+#close {
+  position: absolute;
+  color: black;
+  font-size: 40px;
+  right: 15px;
+  top: 10px;
+}
+
+.mnav a {
+  color: rgba(0, 0, 0, 0.863);
+  text-decoration: none;
+  font-size: 22px;
+  padding: 10px 0;
+}
+
+.mnav-a-cont {
+  margin: 20px 0;
+  padding: 10px 0;
+}
+
+.mnav-a-cont:first-child {
+  margin-top: 0;
+}
+
+.logo a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  letter-spacing: 1px;
+}
+
+.logo a h2 {
+  font-size: 18px;
+  font-family: 'Baskervville', serif;
+  font-weight: bold;
+  background-image: linear-gradient(to right,  red, #0036ac);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.logo a img {
+  width: 40px;
+}
+
+.h2-bb {
+  width: 70px;
+  height: 3px;
+  background: #000000da;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
+}
+
+.hero {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.822), rgba(0, 0, 0, 0.507)), url('images/hero/bk3.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 50px 5% 70px;
+  position: relative;
+  animation: hero 1s;
+}
+
+@keyframes hero {
+  from {
+    transform: scale(0.5);
+    transition: transform 0.3s;
+  }
+  to {
+    transform: scale(1);
+    transition: transform 0.3s;
+  }
+}
+
+.hero h1 {
+  color: white;
+  width: 300px;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.hero p {
+  color: rgba(255, 255, 255, 0.829);
+  width: 200px;
+  margin-left: 10px;
+}
+
+.hero img {
+  position: absolute;
+  width: 220px;
+  bottom: -10px;
+  right: 30px;
+  transform: rotate(-15deg);
+}
+
+#search {
+  animation: search 1s;
+}
+
+@keyframes search {
+  from {
+    transform: translateX(40px);
+  }
+  to {
+    transform: translateX(0);
+    transition: transform 0.3s;
+  }
+}
+
+#search form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 5% ;
+  position: relative;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 5px 5px rgb(209, 209, 209);
+}
+
+#clear {
+  position: absolute;
+  right: 105px;
+  cursor: pointer;
+  top: 8%;
+  display: none;
+}
+
+#clear span {
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  padding-left: 15px;
+  border: none;
+  outline: none;
+  border-radius: 20px 0 0 20px;
+  background: white;
+}
+
+.search-bar input:focus {
+  background: rgba(255, 255, 255, 0.555);
+}
+
+.search-bar input::placeholder {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.search-bar button {
+  white-space: nowrap;
+  border-radius:  0 20px 20px 0;
+  border: none;
+  outline: none;
+  padding: 10px 15px 10px 10px;
+  background-color: rgb(0, 54, 172);
+  color: white;
+  font-size: 14px;
+  font-size: 500;
+  cursor: pointer;
+}
+
+.super-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5% 0;
+}
+
+.super-nav h3 {
+  font-weight: 500;
+}
+
+.super-nav a {
+  color: rgb(0, 54, 172);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.store-show {
+  margin: 30px 0;
+  overflow-x: hidden;
+  animation: show 2s;
+}
+
+@keyframes show {
+  from {
+    transform: translateY(30px);
+    transition: transform 0.2s;
+  }
+  to {
+    transform: translateY(0);
+    transition: transform 0.2s;
+  }
+}
+
+.store-card-flex {
+  display: inline-block;
+  padding: 15px 10px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.store-card {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px;
+  width: 300px;
+  height: 180px;
+  background-size: cover;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.store-card:last-child {
+  margin-right: 0;
+}
+
+.store-cardh3 {
+  padding: 10px 20px;
+  background: rgb(0, 0, 0);
+  border-radius: 20px;
+  position: absolute;
+  color: red;
+  font-weight: 500;
+  bottom: 10px;
+  transform: translateX(50%);
+  right: 50%;
+}
+
+.prod-show {
+  margin: 0 5% 30px;
+}
+
+.prod-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.prod-nav a {
+  color: rgb(0, 54, 172);
+  text-decoration: none;
+}
+
+.poppro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 10px;
+}
+
+.pg-cont {
+  width: auto;
+}
+
+.pg-cont img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.hiw {
+  margin-bottom: 30px;
+}
+
+.right {
+  animation: slideInRight linear both;
+  animation-timeline: view();
+  animation-range: entry 100% cover 40%;
+}
+
+.left {
+  animation: slideInLeft linear both;
+  animation-timeline: view();
+  animation-range: entry 100% cover 40%;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity transform 0.3s;
+    
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity transform 0.3s;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity transform 0.3s;
+    
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity transform 0.3s;
+  }
+}
+
+.hiw h2{
+  color: black;
+  text-align: center;
+  font-size: 22px;
+  animation: upup linear both;
+  animation-timeline: view();
+  animation-range: entry 80% cover 50%;
+}
+
+@keyframes upup {
+  from {
+    transform: scale(0);
+    transition: transform 0.3s;
+  }
+  to {
+    transform: scale(1);
+    transition: transform 0.3s;
+  }
+}
+
+.hiw-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 15px;
+  row-gap: 15px;
+  margin: 40px 10px;
+}
+
+.hiw-card {
+  height: 220px;
+  border-radius: 20px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 5px 5px 5px rgba(90, 90, 90, 0.137);
+  padding: 10px 8px;
+  background-color: rgba(255, 255, 255, 0.534);
+}
+
+.hiw-card img {
+  width: 80px;
+  object-fit: cover;
+}
+
+.hiw-card h4 {
+  font-size: 14px;
+  text-align: center;
+  margin: 10px 0;
+  color: rgba(0, 0, 0, 0.89);
+}
+
+.hiw-card p {
+  font-size: 12px;
+  text-align: center;
+  font-weight: 400;
+  color: rgb(110, 110, 110);
+}
+
+.benefit {
+  margin: 40px 0 0;
+  animation: benefit linear both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 30%;
+}
+
+@keyframes benefit {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.ben-cont {
+  background: linear-gradient(to bottom right, rgb(0, 54, 172), rgba(0, 0, 0, 0.842));
+  padding: 20px 2% 40px;
+}
+
+.ben-cont h2 .h2-bb {
+  background: rgb(141, 141, 141);
+}
+
+.ben-cont h2 {
+  color: white;
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 40px;
+}
+
+.ben-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 20px;
+  
+}
+
+.ben {
+ width: auto;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+}
+
+.ben h4 {
+  font-size: 14px;
+  color: rgb(241, 241, 241);
+  margin-bottom: 10px;
+}
+
+.ben p {
+  text-align: center;
+  font-size: 12px;
+  color: rgb(190, 190, 190);
+}
+
+footer nav {
+  border-top: 1px solid rgba(117, 117, 117, 0.137);
+  background: #efefef;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 10px 0;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+footer nav a {
+  color: rgba(117, 117, 117, 0.945);
+  text-decoration: none;
+}
+
+.ftnav a {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: 17px;
+  width: 18px;
+  height: 18px;
+}
+
+#cart-count {
+  background: red;
+  color: white;
+  font-size: 12px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid white;
+  
+}
+
+.ftnav a ion-icon {
+  font-size: 20px;
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>supermarkets product lists</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baskervville&family=Lato&family=Playfair+Display&family=Raleway:wght@500&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="store-listings.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+  <div class="show-conte">
+    <div class="well">
+
+    </div>
+    <div id="show">
+      <div id="outview"><span>&#215</span></div>
+      <div class="show-cont">
+        <div class="show-img-cont">
+          <img id="show-img">
+        </div>
+      </div>
+      <div class="show-cont2">
+        <div id="show-name"></div>
+        <div id="show-price"></div>
+        <div class="show-btn">
+          <button>
+            Add To Shopping List
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+  <div class="menu-nav" id="menu">
+    <div class="menu-nav-cont">
+
+    </div>
+    <div class="menu-nav-cont2">
+      <div id="close">&#215</div>
+      <div class="mnav">
+        <div class="mnav-a-cont"><a href="index.html">Home</a></div>
+        <div class="mnav-a-cont"><a href="stores-page.html">Stores</a></div>
+        <div class="mnav-a-cont"><a href="shopping-lists.html">Shopping List</a></div>
+        <div class="mnav-a-cont"><a href="about-page.html">About us</a></div>
+        <div class="mnav-a-cont"><a href="contact-page.html">Contact us</a></div>
+      </div>
+
+    <div class="SM-links">
+    </div>
+    </div>
+  </div>
+
+  <div id="alertBox4">
+    <div class="icon4"><ion-icon name="checkmark-circle"></ion-icon></div>
+    <div class="alertText">Added to shopping list</div> 
+  </div>
+
+  <header>
+    <div id="bkimg">
+      <div class="back">
+          <ion-icon name="chevron-back-outline" id="back"></ion-icon>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section id="search">
+      <form action="search-page.html" method="get">
+        <div class="search-bar">
+          <input type="text" name="query" placeholder="search for food items, brands, or categories" id="input">
+          <button type="submit">Find prices</button>
+          <div id="clear"><span>&#215</span></div>
+        </div>
+      </form>
+      <div class="logo">
+        <img id="stlogo">
+      </div>
+      <h1 id="name"></h1>
+      <a href="#">
+        <ion-icon id="location" name="location"></ion-icon>
+        <p>Find closest store locations</p>
+      </a>
+    </section>
+
+    <section id="category">
+      <div class="catg">
+        <div class="catbtn"> 
+          <button class="button-value"onclick="filterProduct('foodcupboard')">Food cupboard</button>        
+          <button class="button-value" onclick="filterProduct('breakfast')">Breakfast</button>
+          <button class="button-value" onclick="filterProduct('lunch')">lunch</button>
+          <button class="button-value"onclick="filterProduct('supper')">supper</button>
+          <button class="button-value" onclick="filterProduct('dinner')">dinner</button>
+          <button class="button-value" onclick="filterProduct('soup')">soup</button>
+        </div>
+        <div class="bb"></div>
+      </div>
+      
+
+      <div id="catprod"></div> 
+    </section>
+  </main>
+
+  <footer>
+    <nav>
+      <div class="ftnav">
+        <a href="index.html">
+          <ion-icon name="home"></ion-icon>
+          Home
+        </a>
+      </div>
+      <div class="ftnav">
+        <a href="stores-page.html">
+          <ion-icon name="storefront"></ion-icon>
+          stores
+        </a>
+      </div>
+      <div class="ftnav">
+        <a href="shopping-lists.html">
+          <ion-icon name="cart"></ion-icon>
+          shopping-list
+          <div class="cart-count"><span id="cart-count"></span></div>
+        </a>
+      </div>
+      <div class="ftnav">
+        <a id="more-link" onclick="show()">
+          <ion-icon name="grid"></ion-icon>
+          more
+        </a>
+      </div>
+    </nav>
+  </footer>
+  
+  
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="store-listings.js"></script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+main {
+  padding: 20px 3% 50px;
+}
+
+body  {
+  position: relative;
+  height: 90vh;
+  width: 100%;
+}
+
+#shopping-list {
+  padding-bottom: 60px;
+}
+
+.empty-alert {
+  position: absolute;
+  width: 80%;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0px 0px 10px rgba(218, 218, 218, 0.664);
+  border-radius: 20px 0px;
+  padding: 20px;
+  background-color: white;
+  animation: display 1.1s;
+  transition: animation 0.5s, top 0.5s;
+}
+
+@keyframes display {
+  0% {
+    top: 45%;
+  }
+  70% {
+    top: 32%;
+  }
+  100% {
+    top: 40%;
+  }
+}
+
+.empty-alert p {
+  text-align: center;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.788);
+  margin-bottom: 40px;
+  line-height: 24px;
+}
+
+.empty-alert button {
+  border: none;
+  outline: none;
+  background-color: rgb(0, 54, 172);
+  padding: 10px 15px;
+  border-radius: 20px;
+}
+
+.empty-alert button a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+}
+
+.btn-exp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shopcard {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 90px;
+  margin: 10px 0;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(80, 80, 80, 0.075);
+}
+
+.pricedetail {
+  position: absolute;
+  left: 90px;
+  font-size: 12px;
+  color: rgb(126, 126, 126);
+}
+
+.shopcard-img-cont {
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shopcard-img-cont img {
+  width: 50px;
+  object-fit: cover;
+}
+
+.shopcard-detail-cont {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 10px 20px 10px 10px;
+  height: 100%;
+}
+
+.shopcard-detail1 {
+  flex-basis: 40%;
+  display: flex;
+  align-items: start;
+}
+
+.shopcard-detail1 p {
+  color: rgba(46, 46, 46, 0.842);
+}
+
+.shopcard-detail2 {
+  flex-basis: 60%;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.shopcard-detail2 h5 {
+  color: rgba(0, 0, 0, 0.938);
+  font-size: 16px;
+}
+
+.shopcard-detail2 ion-icon {
+  font-size: 20px;
+  color: rgb(77, 77, 77);
+}
+
+.shopcard-quant {
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shopcard-quant button {
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 50%;
+}
+
+.shopcard-quant span {
+  padding: 5px 15px;
+  font-size: 16px;
+}
+
+.total {
+  position: fixed;
+  bottom: 58px;
+  left: 0;
+  right: 0;
+  background: rgb(0, 54, 172);
+  width: 100%;
+  padding: 10px 5%;
+}
+
+.total h5 {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#total {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
