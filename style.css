@@ -476,19 +476,25 @@ nav {
 .ben-grid {
   display: grid;
   grid-template-columns: auto auto auto;
-  column-gap: 20px;
+  column-gap: 10px;
   
 }
 
 .ben {
  width: auto;
+ height: 200px;
  display: flex;
  flex-direction: column;
  align-items: center;
- justify-content: center;
+}
+
+.ben img {
+  width: 30px;
+  margin-bottom: 10px;
 }
 
 .ben h4 {
+  text-align: center;
   font-size: 14px;
   color: rgb(241, 241, 241);
   margin-bottom: 10px;
