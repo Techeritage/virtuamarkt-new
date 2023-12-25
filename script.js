@@ -13,6 +13,12 @@ const textToDisplay = "Your Ultimate Food Price Guide";
   }
 
   type();
+
+  //copyright date function
+const date = new Date();
+const year = date.getFullYear();
+
+document.getElementById("year").textContent = year;
   
 //craete full store data with their products
 const stores = [
