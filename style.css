@@ -27,6 +27,19 @@ nav {
   position: sticky;
 }
 
+#cursor {
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
 .menu-nav {
   width: 100%;
   position: fixed;
@@ -113,18 +126,6 @@ nav {
   width: 100%;
   padding: 50px 5% 70px;
   position: relative;
-  animation: hero 1s;
-}
-
-@keyframes hero {
-  from {
-    transform: scale(0.5);
-    transition: transform 0.3s;
-  }
-  to {
-    transform: scale(1);
-    transition: transform 0.3s;
-  }
 }
 
 .hero h1 {
@@ -133,12 +134,22 @@ nav {
   margin-bottom: 15px;
   font-weight: 500;
   font-size: 20px;
-  }
+}
 
 .hero p {
   color: rgba(255, 255, 255, 0.829);
   width: 200px;
   margin-left: 10px;
+  animation: wow 3s;
+}
+
+@keyframes wow {
+  0% {
+    opacity: 0; 
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .hero img {

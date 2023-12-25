@@ -1,3 +1,19 @@
+//typing text animation
+const textToDisplay = "Your Ultimate Food Price Guide";
+  const text = document.getElementById("text");
+  const cursor = document.getElementById("cursor");
+  let letterIndex = 0;
+
+  function type() {
+    if (letterIndex < textToDisplay.length) {
+      text.textContent += textToDisplay.charAt(letterIndex);
+      letterIndex++;
+      setTimeout(type, 100);
+    }
+  }
+
+  type();
+  
 //craete full store data with their products
 const stores = [
   {
