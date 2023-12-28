@@ -203,22 +203,6 @@ function removeFromShoppingList(uniqueId) {
   }
 }
 
-// Function to update the shopping cart icon
-function updateShoppingCartIcon() {
-  const cartCount = document.getElementById('cart-count');
-  cartCount.textContent = productList.length; // Use the length of the productList
-}
-
-//call shopping cart icon
-updateShoppingCartIcon();
-
-
-//back icon functionality
-const backIcon = document.getElementById('back');
-backIcon.addEventListener('click',function() {
-  window.history.back();
-});
-
 //footer nav active
 const currentPage = window.location.pathname.split('/').pop();
 
@@ -236,6 +220,23 @@ switch (currentPage) {
     document.getElementById('shopping-list-link').style.color = "rgb(0, 54, 172)";
     break;
 }
+
+// Function to update the shopping cart icon
+function updateShoppingCartIcon() {
+  const cartCount = document.getElementById('cart-count');
+  cartCount.textContent = productList.length; // Use the length of the productList
+}
+
+//call shopping cart icon
+updateShoppingCartIcon();
+
+
+//back icon functionality
+const backIcon = document.getElementById('back');
+backIcon.addEventListener('click',function() {
+  window.history.back();
+});
+
 
 //menu navigation
 const close = document.getElementById("close");
