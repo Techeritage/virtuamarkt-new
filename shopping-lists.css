@@ -113,6 +113,7 @@ body  {
 
 .shopcard-detail1 p {
   color: rgba(46, 46, 46, 0.842);
+  font-size: 14px;
 }
 
 .shopcard-detail2 {
@@ -124,7 +125,7 @@ body  {
 
 .shopcard-detail2 h5 {
   color: rgba(0, 0, 0, 0.938);
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .shopcard-detail2 ion-icon {

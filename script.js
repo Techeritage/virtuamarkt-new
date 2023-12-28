@@ -8,7 +8,7 @@ const textToDisplay = "Your Ultimate Food Price Guide";
     if (letterIndex < textToDisplay.length) {
       text.textContent += textToDisplay.charAt(letterIndex);
       letterIndex++;
-      setTimeout(type, 100);
+      setTimeout(type, 60);
     }
   }
 
@@ -240,16 +240,16 @@ const currentPage = window.location.pathname.split('/').pop();
 
 switch (currentPage) {
   case 'index.html':
+    document.getElementById("home-link").innerHTML = "<ion-icon name='home'></ion-icon> Home";
     document.getElementById("home-link").style.color ="rgb(0, 54, 172)";
     break;
   case 'stores-page.html':
+    document.getElementById("stores-link").innerHTML = "<ion-icon name='storefront'></ion-icon> stores";
     document.getElementById('stores-link').style.color = "rgb(0, 54, 172)";
     break;
   case 'shopping-lists.html':
+    document.getElementById("shopping-list-link").innerHTML = "<ion-icon name='cart'></ion-icon> shopping-list <div class='cart-count'><span id='cart-count'></span></div>";
     document.getElementById('shopping-list-link').style.color = "rgb(0, 54, 172)";
-    break;
-    case 'more.html':
-    document.getElementById('more-link').style.color = "rgb(0, 54, 172)";
     break;
 }
 
